@@ -5,9 +5,9 @@ const MongoClient = require("mongodb").MongoClient;
 
 const PORT = 5050;
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
-const MONGO_URL = "mongodb://admin:qwerty@localhost:27017";
+const MONGO_URL = "mongodb://admin:qwerty@172.31.8.255:27017";
 const client = new MongoClient(MONGO_URL);
 
 //GET all users
